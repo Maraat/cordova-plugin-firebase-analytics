@@ -39,6 +39,7 @@
       </config-file>
       <config-file target="AndroidManifest.xml" parent="/*">
          <uses-permission android:name="android.permission.INTERNET" />
+         <meta-data android:name="firebase_analytics_collection_enabled" android:value="true" />
       </config-file>
       <framework src="com.google.firebase:firebase-core:+" />
       <source-file src="src/android/google-services.json" target-dir="." />
