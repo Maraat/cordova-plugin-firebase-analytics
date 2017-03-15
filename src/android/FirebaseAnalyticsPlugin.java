@@ -29,7 +29,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
 
         this.firebaseAnalytics = FirebaseAnalytics.getInstance(context);
 
-        FirebaseAnalytics.setAnalyticsCollectionEnabled(true);
+        this.firebaseAnalytics.setAnalyticsCollectionEnabled(true);
     }
 
     @Override
