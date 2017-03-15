@@ -92,7 +92,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
     }
 
     private void setEnabled(CallbackContext callbackContext, String enabled) {
-        this.firebaseAnalytics.setAnalyticsCollectionEnabled(enabled == true);
+        this.firebaseAnalytics.setAnalyticsCollectionEnabled(enabled);
 
         callbackContext.success();
     }
