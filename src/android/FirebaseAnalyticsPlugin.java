@@ -28,6 +28,8 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
         Context context = this.cordova.getActivity().getApplicationContext();
 
         this.firebaseAnalytics = FirebaseAnalytics.getInstance(context);
+
+        FirebaseAnalytics.setAnalyticsCollectionEnabled(true);
     }
 
     @Override
@@ -90,7 +92,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
     }
 
     private void setEnabled(CallbackContext callbackContext, String enabled) {
-        this.firebaseAnalytics.setAnalyticsCollectionEnabled(enabled == "true");
+        this.firebaseAnalytics.setAnalyticsCollectionEnabled(enabled == true);
 
         callbackContext.success();
     }
