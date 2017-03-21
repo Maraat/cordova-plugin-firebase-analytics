@@ -20,10 +20,21 @@
             <param name="onload" value="true" />
          </feature>
       </config-file>
+      <config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
+         <string>development</string>
+      </config-file>
+      <config-file parent="aps-environment" target="*/Entitlements-Release.plist">
+         <string>production</string>
+      </config-file>
       <header-file src="src/ios/FirebaseAnalyticsPlugin.h" />
       <source-file src="src/ios/FirebaseAnalyticsPlugin.m" />
-      <source-file src="src/ios/GoogleService-Info.plist" framework="true" />
-      <pod id="Firebase/Analytics" />
+      <resource-file src="src/ios/GoogleService-Info.plist" target="Resources/GoogleService-Info.plist" />
+      <framework custom="true" src="src/ios/Analytics/FirebaseAnalytics.framework" />
+      <framework custom="true" src="src/ios/Analytics/FirebaseCore.framework" />
+      <framework custom="true" src="src/ios/Analytics/FirebaseInstanceID.framework" />
+      <framework custom="true" src="src/ios/Analytics/GoogleInterchangeUtilities.framework" />
+      <framework custom="true" src="src/ios/Analytics/GoogleSymbolUtilities.framework" />
+      <framework custom="true" src="src/ios/Analytics/GoogleUtilities.framework" />
    </platform>
    <platform name="android">
       <config-file target="res/xml/config.xml" parent="/*">
