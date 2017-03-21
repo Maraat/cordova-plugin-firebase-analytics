@@ -22,6 +22,7 @@
       </config-file>
       <header-file src="src/ios/FirebaseAnalyticsPlugin.h" />
       <source-file src="src/ios/FirebaseAnalyticsPlugin.m" />
+      <source-file src="src/ios/GoogleService-Info.plist" />
       <pod id="Firebase/Analytics" />
    </platform>
    <platform name="android">
